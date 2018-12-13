@@ -1,0 +1,56 @@
+.page-logo {
+  height: 33vh;
+  background: url("../../img/background.png") 45% 25% no-repeat;
+  color: #ffffff;
+
+  @media ($tablet-width) {  
+    height: 80vh;
+    background-size: cover;
+  }
+
+  @media ($desktop-width) {
+    height: 100vh;
+
+  }
+}
+
+.page-logo__wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1500px;
+}
+
+.page-logo__scroll {
+  position: relative;
+  display: none;
+  margin-top: 77vh;
+  padding-bottom: 10px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: #f1f1f1;
+
+  @media ($desktop-width) {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+}
+
+.page-logo__scroll:after {
+  position: absolute;
+  display: none;
+  width: 16px;
+  height: 16px;
+  left: 50%;
+  bottom: -15px;
+  content: "";
+  background-image: url("../../img/double-arrow.png");
+  background-size: contain;
+
+
+  @media ($desktop-width) {
+    display: block;
+  }
+}

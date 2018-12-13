@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/open_sans.eot"); /* IE 9 Compatibility Mode */
+  src: url("../fonts/open_sans.eot?#iefix") format("embedded-opentype"),
+    /* IE < 9 */ url("../fonts/open_sans.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/open_sans.woff") format("woff"),
+    /* Firefox >= 3.6, any other modern browser */ url("../fonts/open_sans.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/open_sans.svg#open_sans")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Open Sans Light';
+	src: url('../fonts/open_sans_light.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/open_sans_light.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/open_sans_light.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/open_sans_light.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/open_sans_light.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/open_sans_light.svg#open_sans_light') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: "Nexa Light";
+  src: url("../fonts/nexalight.eot"); /* IE 9 Compatibility Mode */
+  src: url("../fonts/nexalight.eot?#iefix") format("embedded-opentype"),
+    /* IE < 9 */ url("../fonts/nexalight.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/nexalight.woff") format("woff"),
+    /* Firefox >= 3.6, any other modern browser */ url("../fonts/nexalight.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/nexalight.svg#nexalight")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'PT Sans';
+	src: url('../fonts/pt_sans.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/pt_sans.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/pt_sans.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/pt_sans.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/pt_sans.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/pt_sans.svg#pt_sans') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: "PT Sans Bold";
+  src: url("../fonts/pt_sans_bold.eot"); /* IE 9 Compatibility Mode */
+  src: url("../fonts/pt_sans_bold.eot?#iefix") format("embedded-opentype"),
+    /* IE < 9 */ url("../fonts/pt_sans_bold.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/pt_sans_bold.woff") format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("../fonts/pt_sans_bold.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("../fonts/pt_sans_bold.svg#pt_sans_bold")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}

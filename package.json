@@ -1,9 +1,17 @@
 {
   "dependencies": {
-    "gulp": "^4.0.0",
     "gulp-cli": "^2.0.1"
   },
   "devDependencies": {
-    "gulp-sass": "^4.0.2"
+    "autoprefixer": "^9.4.2",
+    "browser-sync": "^2.26.3",
+    "gulp": "3.9.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "3.1.0"
+  },
+  "scripts": {
+    "build": "gulp style",
+    "start": "gulp serve"
   }
 }
