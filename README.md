@@ -1,4 +1,4 @@
-# landing-test
+# Тестовое задание
 
 https://yuryspb.github.io/
 
