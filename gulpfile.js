@@ -1,29 +1,80 @@
+"use strict";
+
 var gulp = require("gulp");
 var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
+var mqpacker = require("css-mqpacker");
+var minify = require("gulp-csso");
+var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
+var server = require("browser-sync");
+var clean = require("gulp-clean");
+var runSequence = require("run-sequence");
 
 gulp.task("style", function() {
-  gulp
+  return gulp
     .src("sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
-    .pipe(postcss([autoprefixer({ browsers: ["last 2 versions"] })]))
-    .pipe(gulp.dest("css"))
-    .pipe(server.stream());
+    .pipe(
+      postcss([
+        autoprefixer({
+          browsers: [
+            "last 1 version",
+            "last 2 Chrome versions",
+            "last 2 Firefox versions",
+            "last 2 Opera versions",
+            "last 2 Edge versions"
+          ]
+        })
+      ])
+    )
+    .pipe(gulp.dest("build/css"))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("build/css"));
 });
 
-gulp.task("serve", ["style"], function() {
+gulp.task("images", function() {
+  return gulp
+    .src("img/*.{png,jpg}")
+    .pipe(
+      imagemin({
+        optimizationLevel: 5,
+        progressive: true
+      })
+    )
+    .pipe(gulp.dest("build/img"));
+});
+
+gulp.task("copy:fonts", function() {
+  return gulp.src("fonts/**/*.{woff,woff2}").pipe(gulp.dest("build/fonts"));
+});
+
+gulp.task("copy:html", function() {
+  return gulp.src("*.html").pipe(gulp.dest("build"));
+});
+
+gulp.task("clean", function() {
+  return gulp.src("build", { read: false }).pipe(clean({ force: true }));
+});
+
+gulp.task("build", function() {
+  runSequence("clean", "copy:fonts", "copy:html", "style", "images");
+});
+
+gulp.task("serve", function() {
   server.init({
-    server: ".",
+    server: "build",
     notify: false,
     open: true,
-    cors: true,
     ui: false
   });
 
-  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html").on("change", server.reload);
+  gulp.watch("sass/*.scss", ["style"]);
+  gulp.watch("*.html", ["copy:html"]);
 });
+
+gulp.task("default", ["build"]);
