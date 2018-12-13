@@ -38,10 +38,16 @@
   display: inline-block;
   margin-right: 20px;
   font-size: 24px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
 
+  @media ($tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .main-nav__link {
