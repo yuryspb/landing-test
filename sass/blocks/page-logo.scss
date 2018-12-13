@@ -1,9 +1,10 @@
 .page-logo {
   height: 33vh;
-  background: url("../../img/background.jpg") 45% 25% no-repeat;
+  background: url("../../img/background-mobile.jpg") 35% 90% no-repeat;
   color: #ffffff;
 
   @media ($tablet-width) {  
+    background: url("../../img/background.jpg") no-repeat;
     height: 80vh;
     background-size: cover;
   }
