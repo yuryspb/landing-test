@@ -25,6 +25,7 @@
 .page-logo__scroll {
   position: absolute;
   display: none;
+  max-width: 1500px;
 
 
   @media ($desktop-width) {
